@@ -24,9 +24,9 @@ path, on my iMac that is:
 
 Having copied it on the path, you should then run IPCamera and note the address
 it gives you: for me that usually turns out to be something like:
-http://192.168.0.8:8080
+http://192.168.0.8:8080, you can then do:
 
-You can then do: slomograb 192.168.0.8:8080
+    $ slomograb 192.168.0.8:8080
 
 This will take a high-resolution picture using the settings you have in effect
 and save it in the current working directory. The filename will be
