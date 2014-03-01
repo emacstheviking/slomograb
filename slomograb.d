@@ -11,7 +11,7 @@ import std.string;
 	@author  Sean Charles   <sean lives-at objitsu dot com>
 	@licence MIT spread it around!
 
-  A simple frame grabber tool for usw with IPWebcam Remote (Android).
+  A simple frame grabber tool for use with IPWebcam Remote (Android).
 
 */
 
