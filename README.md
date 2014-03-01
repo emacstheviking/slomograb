@@ -2,7 +2,7 @@
 
 My son (and myself) both love trying to make stop-motion Lego movies but there
 is an absolute dearth of good free applications out there.  I aim to remedy
-that will a cross-platform binary (under development) that uses D-lang and
+that with a cross-platform binary (under development) that uses D-lang and
 Vibe.d, this little utility was a proof of concept to get me into learning the
 libraries more and also to prove that I could actually grab an image from
 IPWebcam Remote.
