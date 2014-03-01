@@ -5,7 +5,7 @@ is an absolute dearth of good free applications out there.  I aim to remedy
 that with a cross-platform binary (under development) that uses D-lang and
 Vibe.d, this little utility was a proof of concept to get me into learning the
 libraries more and also to prove that I could actually grab an image from
-IPWebcam Remote.
+IPWebcam Remote, http://www.appbrain.com/app/com.pas.webcam.
 
 # Building it
 
