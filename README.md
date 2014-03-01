@@ -48,7 +48,7 @@ place like `usr/local/bin` so it can be run from anywhere.
 
 For each sequence / scene you are going to shoot, create a folder called
 "scene_NAME", then I "cd" into that and get ready for a shoot... when
-everything is ready, issue the command to gram a frame, rinse and repeat.
+everything is ready, issue the command to grab a frame, rinse and repeat.
 
 At any time you can just use the "stitch" command and then wathc it, I do it like this:
 
