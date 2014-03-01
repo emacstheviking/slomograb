@@ -1,4 +1,4 @@
-# Simple frame grabber with IPWebcam Remote Camera (Android)
+# Simple frame grabber using IPWebcam Remote Camera (Android)
 
 My son (and myself) both love trying to make stop-motion Lego movies but there
 is an absolute dearth of good free applications out there.  I aim to remedy
@@ -23,13 +23,13 @@ path, on my iMac that is /usr/local/bin/slomograb
 Having copied it on the path, you should then run IPCamera and note the address
 it gives you: for me that usually turns out to be something like:
 http://192.168.0.8:8080
- 
+
 You can then do: slomograb 192.168.0.8:8080
 
 This will take a high-resolution picture using the settings you have in effect
 and save it in the current working directory. The filename will be
 fNNNNNNNN.jpg and it will automatically find the largest of frames before
-saving it. Each invocation produces a higer frame: 
+saving it. Each invocation produces a higer frame:
 
     f00000001.jpg
     f00000002.jpg
