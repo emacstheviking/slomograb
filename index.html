@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Slomograb : Cross-platform stop-motion frame grabber with IPWebcam Remote" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Slomograb</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/emacstheviking/slomograb">View on GitHub</a>
+
+          <h1 id="project_title">Slomograb</h1>
+          <h2 id="project_tagline">Cross-platform stop-motion frame grabber with IPWebcam Remote</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/emacstheviking/slomograb/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/emacstheviking/slomograb/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="simple-frame-grabber-using-ipwebcam-remote-camera-android" class="anchor" href="#simple-frame-grabber-using-ipwebcam-remote-camera-android"><span class="octicon octicon-link"></span></a>Simple frame grabber using IPWebcam Remote Camera (Android)</h1>
+
+<p>My son (and myself) both love trying to make stop-motion Lego movies but there
+is an absolute dearth of good free applications out there.  I aim to remedy
+that with a cross-platform binary (under development) that uses D-lang and
+Vibe.d, this little utility was a proof of concept to get me into learning the
+libraries more and also to prove that I could actually grab an image from
+IPWebcam Remote.</p>
+
+<h1>
+<a name="building-it" class="anchor" href="#building-it"><span class="octicon octicon-link"></span></a>Building it</h1>
+
+<p>Build the binary as shown, this is for OS X:</p>
+
+<pre><code>dmd -L/usr/lib/libcurl.dylib main.d
+</code></pre>
+
+<p>You may have to fiddle with that to work on other systems.</p>
+
+<p>Once it is built, copy it somewhere that it can be found on the system file
+path, on my iMac that is:</p>
+
+<pre><code>$ sudo cp slomograb /usr/local/bin/slomograb
+</code></pre>
+
+<h1>
+<a name="using-it" class="anchor" href="#using-it"><span class="octicon octicon-link"></span></a>Using it.</h1>
+
+<p>Having copied it on the path, you should then run IPCamera and note the address
+it gives you: for me that usually turns out to be something like:
+<a href="http://192.168.0.8:8080">http://192.168.0.8:8080</a>, you can then do:</p>
+
+<pre><code>$ slomograb 192.168.0.8:8080
+</code></pre>
+
+<p>This will take a high-resolution picture using the settings you have in effect
+and save it in the current working directory. The filename will be
+fNNNNNNNN.jpg and it will automatically find the largest of frames before
+saving it. Each invocation produces a higer frame:</p>
+
+<pre><code>f00000001.jpg
+f00000002.jpg
+f00000003.jpg
+  :
+</code></pre>
+
+<p>What you do with it after that is up to you, I use ffmpeg to stitch them
+together into the final sequence for now and then the clip is imported into
+iMovie for editing. The script "stitch" is also in this project and shows how
+to use ffmpeg to do just that, again on OSX. Again, copy <code>stitch</code> into a
+place like <code>usr/local/bin</code> so it can be run from anywhere.</p>
+
+<h1>
+<a name="working-practice" class="anchor" href="#working-practice"><span class="octicon octicon-link"></span></a>Working Practice</h1>
+
+<p>For each sequence / scene you are going to shoot, create a folder called
+"scene_NAME", then I "cd" into that and get ready for a shoot... when
+everything is ready, issue the command to grab a frame, rinse and repeat.</p>
+
+<p>At any time you can just use the "stitch" command and then watch it, I do it like this:</p>
+
+<pre><code> $ stitch &amp;&amp; open clip.mp4
+</code></pre>
+
+<p>Which on my Mac will glue them and then open Quicktime for playback.</p>
+
+<p>So, there we have it, the beginnings of a simple stop-motion tool chain that is
+in theory at least, cross platform thanks to the power of D-lang.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Slomograb maintained by <a href="https://github.com/emacstheviking">emacstheviking</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
