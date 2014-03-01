@@ -16,7 +16,9 @@ Build the binary as shown, this is for OS X:
 You may have to fiddle with that to work on other systems.
 
 Once it is built, copy it somewhere that it can be found on the system file
-path, on my iMac that is /usr/local/bin/slomograb
+path, on my iMac that is:
+
+    $ sudo cp slomograb /usr/local/bin/slomograb
 
 # Using it.
 
