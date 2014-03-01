@@ -1,0 +1,14 @@
+#!/bin/bash -x
+#
+# frame stitcher: $1 => scene folder name
+#
+# What it does: stitches all of the files named fNNNNNNNN.png into a
+# single file called "clip.mp4" which can then be imported into iMovie
+# for editing. It also means that we can quickly see how the film is
+# going to look a scene at a time.
+#
+# IP Webcam Remote: I am using this program on the tablet at 1920x1280
+# which is true 16:9 aspect giving 1080p HD quality video capability.
+# (http://pacoup.com/2011/06/12/list-of-true-169-resolutions/)
+#
+ffmpeg -v 0 -y -r 5 -i f%08d.jpg -c:v libx264 -r 30 -pix_fmt yuv420p clip.mp4
